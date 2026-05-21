@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mentions légales — ADN Paysage</title>
+<meta name="description" content="Mentions légales d'ADN Paysage, paysagiste artisan en Savoie (73).">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23112E13'/><path d='M16 5C9.5 5 6 11 7 17c1 4.5 4.5 8 9 8.5 4.5-.5 8-4 9-8.5 1-6-2.5-12-9-12z' fill='%23F5F0EE'/><path d='M16 16v9' stroke='%23112E13' stroke-width='2.2' stroke-linecap='round'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --vert-foret: #112E13;
+    --vert-mousse: #5A7A3A;
+    --beige: #F5F0EE;
+    --beige-clair: #FAF8F7;
+    --anthracite: #2C2C2C;
+    --gris: #6B6B6B;
+    --orange: #C4622D;
+    --blanc: #FFFFFF;
+    --radius: 4px;
+    --radius-lg: 8px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; color: var(--anthracite); line-height: 1.7; background: var(--blanc); -webkit-font-smoothing: antialiased; }
+  h1, h2, h3 { font-family: 'Lora', serif; font-weight: 600; line-height: 1.25; }
+  a { color: var(--vert-foret); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* NAV */
+  .nav {
+    position: sticky; top: 0; z-index: 50;
+    background: var(--blanc);
+    border-bottom: 1px solid rgba(17,46,19,0.1);
+    padding: 16px 0;
+  }
+  .container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+  .logo { display: flex; align-items: center; gap: 10px; font-family: 'Lora', serif; font-weight: 700; font-size: 1.1rem; color: var(--vert-foret); text-decoration: none; }
+  .logo-mark { width: 34px; height: 34px; background: var(--vert-foret); color: var(--beige); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.05em; }
+  .nav-back { font-size: 0.88rem; color: var(--gris); display: flex; align-items: center; gap: 6px; }
+  .nav-back:hover { color: var(--vert-foret); }
+
+  /* PAGE CONTENT */
+  .page-header {
+    background: var(--vert-foret);
+    color: var(--blanc);
+    padding: 56px 0 48px;
+  }
+  .page-header .container { max-width: 860px; }
+  .page-header .eyebrow {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(245,240,238,0.7);
+    margin-bottom: 12px;
+  }
+  .page-header h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); color: var(--blanc); }
+  .page-header .updated { margin-top: 10px; font-size: 0.82rem; color: rgba(255,255,255,0.55); }
+
+  .page-content { padding: 56px 0 80px; }
+  .page-content .container { max-width: 860px; }
+
+  .legal-section { margin-bottom: 48px; }
+  .legal-section h2 {
+    font-size: 1.2rem;
+    color: var(--vert-foret);
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--beige);
+  }
+  .legal-section h3 { font-size: 1rem; margin: 20px 0 8px; color: var(--anthracite); }
+  .legal-section p { font-size: 0.93rem; color: #444; margin-bottom: 10px; }
+  .legal-section ul { padding-left: 20px; margin-bottom: 10px; }
+  .legal-section ul li { font-size: 0.93rem; color: #444; margin-bottom: 5px; }
+  .info-block {
+    background: var(--beige-clair);
+    border-left: 3px solid var(--vert-foret);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    padding: 16px 20px;
+    margin-bottom: 14px;
+    font-size: 0.9rem;
+  }
+  .info-block strong { display: block; color: var(--vert-foret); margin-bottom: 4px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; }
+
+  /* FOOTER */
+  .footer { background: var(--vert-foret); color: rgba(255,255,255,0.8); padding: 40px 0 20px; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 32px; max-width: 1200px; margin-left: auto; margin-right: auto; padding: 0 24px; }
+  .footer .logo { color: var(--blanc); margin-bottom: 12px; }
+  .footer-brand p { font-size: 0.82rem; line-height: 1.6; max-width: 260px; }
+  .footer h4 { font-family: 'Lora', serif; font-size: 0.85rem; color: var(--blanc); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 14px; }
+  .footer ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .footer ul li { font-size: 0.82rem; }
+  .footer ul a { color: rgba(255,255,255,0.75); transition: color 0.2s; }
+  .footer ul a:hover { color: var(--blanc); text-decoration: none; }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.12); padding-top: 16px; display: flex; justify-content: space-between; align-items: center; font-size: 0.75rem; color: rgba(255,255,255,0.45); max-width: 1200px; margin: 0 auto; padding-left: 24px; padding-right: 24px; }
+
+  @media (max-width: 768px) {
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+    .footer-bottom { flex-direction: column; gap: 6px; text-align: center; }
+  }
+  @media (max-width: 480px) {
+    .footer-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">ADN</span>
+      <span>ADN Paysage</span>
+    </a>
+    <a href="index.html" class="nav-back">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+      Retour au site
+    </a>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<div class="page-header">
+  <div class="container">
+    <span class="eyebrow">Informations légales</span>
+    <h1>Mentions légales</h1>
+    <p class="updated">Dernière mise à jour : mai 2025</p>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="page-content">
+  <div class="container">
+
+    <div class="legal-section">
+      <h2>1. Éditeur du site</h2>
+      <div class="info-block">
+        <strong>Raison sociale</strong>ADN Paysage
+      </div>
+      <div class="info-block">
+        <strong>Statut juridique</strong>Entreprise individuelle
+      </div>
+      <div class="info-block">
+        <strong>SIRET</strong>828 782 565 00026
+      </div>
+      <div class="info-block">
+        <strong>Siège social</strong>Chambéry, Savoie (73), France
+      </div>
+      <div class="info-block">
+        <strong>Téléphone</strong>04 79 28 68 31
+      </div>
+      <div class="info-block">
+        <strong>Email</strong>contact@adn-paysage.fr
+      </div>
+      <div class="info-block">
+        <strong>Directeur de la publication</strong>Le représentant légal d'ADN Paysage
+      </div>
+    </div>
+
+    <div class="legal-section">
+      <h2>2. Hébergement</h2>
+      <p>Ce site est hébergé par :</p>
+      <div class="info-block">
+        <strong>Hébergeur</strong>GitHub, Inc.
+      </div>
+      <div class="info-block">
+        <strong>Adresse</strong>88 Colin P Kelly Jr St, San Francisco, CA 94107, États-Unis
+      </div>
+      <div class="info-block">
+        <strong>Site web</strong><a href="https://github.com" target="_blank" rel="noopener">github.com</a>
+      </div>
+    </div>
+
+    <div class="legal-section">
+      <h2>3. Propriété intellectuelle</h2>
+      <p>L'ensemble des contenus présents sur ce site (textes, images, graphismes, logo, icônes) est la propriété exclusive d'ADN Paysage, sauf mention contraire. Toute reproduction, distribution, modification ou utilisation de ces contenus, sans autorisation écrite préalable d'ADN Paysage, est strictement interdite et constituerait une contrefaçon sanctionnée par les articles L.335-2 et suivants du Code de la Propriété Intellectuelle.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>4. Responsabilité</h2>
+      <p>ADN Paysage s'efforce d'assurer l'exactitude et la mise à jour des informations diffusées sur ce site. Toutefois, ADN Paysage ne peut garantir l'exactitude, la complétude ou l'actualité des informations publiées. En conséquence, l'utilisateur reconnaît utiliser ces informations sous sa responsabilité exclusive.</p>
+      <p>ADN Paysage ne saurait être tenu responsable des dommages directs ou indirects résultant de l'accès au site ou de l'utilisation des informations qui y figurent.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>5. Liens hypertextes</h2>
+      <p>Ce site peut contenir des liens vers d'autres sites. ADN Paysage n'exerce aucun contrôle sur ces sites externes et décline toute responsabilité quant à leur contenu ou aux dommages pouvant résulter de leur consultation.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>6. Droit applicable</h2>
+      <p>Les présentes mentions légales sont régies par le droit français. Tout litige relatif à l'utilisation du site sera soumis à la compétence exclusive des tribunaux français.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>7. Contact</h2>
+      <p>Pour toute question relative à ce site, vous pouvez nous contacter :</p>
+      <ul>
+        <li>Par téléphone : <a href="tel:+33479286831">04 79 28 68 31</a></li>
+        <li>Par email : <a href="mailto:contact@adn-paysage.fr">contact@adn-paysage.fr</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo">
+        <span class="logo-mark">ADN</span>
+        <span>ADN Paysage</span>
+      </div>
+      <p>Aménagement · Design · Nature. Paysagiste artisan indépendant en Savoie (73). Entretien, création, élagage, terrasses.</p>
+    </div>
+    <div>
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="index.html#services">Nos services</a></li>
+        <li><a href="index.html#realisations">Réalisations</a></li>
+        <li><a href="index.html#zone">Zone d'intervention</a></li>
+        <li><a href="index.html#contact">Devis gratuit</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+33479286831">04 79 28 68 31</a></li>
+        <li>contact@adn-paysage.fr</li>
+        <li>Lun – Sam · 8h – 19h</li>
+        <li>Chambéry (73)</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Informations</h4>
+      <ul>
+        <li><a href="mentions-legales.html">Mentions légales</a></li>
+        <li><a href="politique-confidentialite.html">Politique de confidentialité</a></li>
+        <li><a href="rgpd.html">RGPD</a></li>
+        <li>SIRET : 828 782 565 00026</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2025 ADN Paysage — Tous droits réservés.</div>
+    <div>Artisan local · Savoie (73) · Auvergne-Rhône-Alpes</div>
+  </div>
+</footer>
+
+</body>
+</html>
