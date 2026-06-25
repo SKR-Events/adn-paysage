@@ -237,21 +237,22 @@ p  { font-size: 0.95rem; color: var(--gris); line-height: 1.75; }
    HERO
    ============================================================ */
 .hero {
-  min-height: 100vh;
   background: var(--beige);
-  padding-top: 100px;
+  padding: 120px 0 56px;
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
 }
+.hero .container {
+  max-width: 1400px;
+  padding: 0 32px;
+}
 .hero-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 48px;
   align-items: center;
-  min-height: calc(100vh - 100px);
-  padding: 60px 0;
 }
 .hero-text { position: relative; z-index: 2; }
 .hero-headline {
@@ -321,7 +322,7 @@ p  { font-size: 0.95rem; color: var(--gris); line-height: 1.75; }
 }
 .hero-img-blob img {
   width: 100%;
-  height: 580px;
+  height: clamp(340px, 42vw, 520px);
   object-fit: cover;
   border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%;
 }
@@ -1185,7 +1186,6 @@ a.contact-meta-value:hover { color: var(--vert-clair); }
 @media (max-width: 1024px) {
   .hero-headline .adn-big { font-size: clamp(4rem, 8vw, 7rem); }
   .services-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
-  .realisations-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
 }
 @media (max-width: 900px) {
@@ -1202,16 +1202,12 @@ a.contact-meta-value:hover { color: var(--vert-clair); }
     gap: 16px;
   }
   .nav-toggle { display: block; }
-  .hero-grid { grid-template-columns: 1fr; gap: 40px; }
-  .hero-img-side { order: -1; }
-  .hero-img-blob img { height: 380px; }
-  .hero-badge { width: 100px; height: 100px; }
-  .adn-grid { grid-template-columns: 1fr; }
+  .hero-grid { grid-template-columns: 1fr; gap: 32px; }
+  .hero-img-blob img { height: 300px; }
+  .hero-badge { width: 90px; height: 90px; }
   .apropos-grid { grid-template-columns: 1fr; }
   .apropos-img-side { order: -1; }
   .apropos-img-oval { width: 280px; height: 360px; }
-  .demarche-grid { grid-template-columns: repeat(2, 1fr); }
-  .demarche-grid::before { display: none; }
   .contact-grid { grid-template-columns: 1fr; gap: 40px; }
   .valeurs-grid { grid-template-columns: repeat(2, 1fr); }
   .valeur-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
@@ -1219,16 +1215,15 @@ a.contact-meta-value:hover { color: var(--vert-clair); }
 }
 @media (max-width: 640px) {
   .container { padding: 0 20px; }
+  .hero .container { padding: 0 20px; }
   .section-pad { padding: 72px 0; }
   .form-grid { grid-template-columns: 1fr; }
   .ba-grid { grid-template-columns: 1fr; }
-  .realisations-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
   .footer-bottom-links { flex-wrap: wrap; justify-content: center; gap: 12px; }
-  .hero-img-blob img { height: 300px; }
+  .hero-img-blob img { height: 260px; }
   .services-grid { grid-template-columns: 1fr 1fr; }
-  .demarche-grid { grid-template-columns: 1fr; }
   .valeurs-grid { grid-template-columns: 1fr; }
   .contact-form { padding: 24px 20px; }
 }
@@ -1352,36 +1347,6 @@ a.contact-meta-value:hover { color: var(--vert-clair); }
   </div>
 </div>
 
-<!-- ============ L'ADN DE VOS ESPACES ============ -->
-<section class="adn-section" id="adn">
-  <div class="container">
-    <div class="adn-grid">
-      <div class="adn-text reveal">
-        <span class="eyebrow">Notre vision</span>
-        <h2 class="section-title">L'ADN de vos espaces extérieurs</h2>
-        <p>Comme l'ADN porte l'identité de chaque être vivant, nous façonnons des espaces qui vous ressemblent : précision d'artisan, créativité de designer et amour de la nature alpine savoyarde.</p>
-        <p style="margin-top:12px;">Chaque projet est unique. Nous concevons des lieux de vie extérieurs qui vous ressemblent et respectent la nature.</p>
-        <a href="#services" class="btn btn-dark" style="margin-top:32px;">Nos prestations</a>
-      </div>
-      <div class="reveal">
-        <div class="adn-photo-mosaic">
-          <div class="mosaic-img tall">
-            <img src="apres-terrasse.webp" alt="Jardin alpin réalisé par ADN Paysage">
-          </div>
-          <div class="mosaic-right">
-            <div class="mosaic-img">
-              <img src="apres-gazon.jpg" alt="Remise en état pelouse Savoie">
-            </div>
-            <div class="mosaic-img">
-              <img src="apres-terrasse2.webp" alt="Terrasse bois et aménagement paysager">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ============ SERVICES ============ -->
 <section class="services" id="services">
   <div class="container">
@@ -1479,104 +1444,6 @@ a.contact-meta-value:hover { color: var(--vert-clair); }
       <div class="apropos-img-side reveal">
         <div class="apropos-img-oval">
           <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=700&q=80" alt="Équipe ADN Paysage en Savoie">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ NOTRE DÉMARCHE ============ -->
-<section class="demarche" id="demarche">
-  <div class="container">
-    <div class="demarche-header reveal">
-      <span class="eyebrow">Comment ça marche</span>
-      <h2 class="section-title">Notre démarche</h2>
-      <p class="section-intro">Un accompagnement sur-mesure de la première rencontre jusqu'à la livraison et au-delà.</p>
-    </div>
-    <div class="demarche-grid">
-      <div class="demarche-step reveal">
-        <div class="demarche-blob">
-          <div class="demarche-blob-bg db1"></div>
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1B3A27" stroke-width="1.8"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-        </div>
-        <div class="demarche-num">01</div>
-        <h3>Écoute</h3>
-        <p>Nous échangeons sur vos envies, vos besoins et votre budget lors d'une première visite gratuite.</p>
-      </div>
-      <div class="demarche-step reveal">
-        <div class="demarche-blob">
-          <div class="demarche-blob-bg db2"></div>
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1B3A27" stroke-width="1.8"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-        </div>
-        <div class="demarche-num">02</div>
-        <h3>Conception</h3>
-        <p>Nous imaginons un projet sur-mesure adapté à votre lieu et à vos usages.</p>
-      </div>
-      <div class="demarche-step reveal">
-        <div class="demarche-blob">
-          <div class="demarche-blob-bg db3"></div>
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1B3A27" stroke-width="1.8"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-        </div>
-        <div class="demarche-num">03</div>
-        <h3>Réalisation</h3>
-        <p>Nos équipes donnent vie à votre projet avec soin et expertise, dans les délais convenus.</p>
-      </div>
-      <div class="demarche-step reveal">
-        <div class="demarche-blob">
-          <div class="demarche-blob-bg db4"></div>
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1B3A27" stroke-width="1.8"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M12 6v6l4 2"/></svg>
-        </div>
-        <div class="demarche-num">04</div>
-        <h3>Suivi & entretien</h3>
-        <p>Nous vous accompagnons sur le long terme pour un extérieur toujours à son meilleur.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ RÉALISATIONS (galerie arches) ============ -->
-<section class="realisations" id="realisations">
-  <div class="container">
-    <div class="realisations-header reveal">
-      <span class="eyebrow">Nos chantiers</span>
-      <h2 class="section-title">Réalisations</h2>
-      <p class="section-intro">Quelques-uns de nos projets réalisés en Savoie et dans les environs.</p>
-    </div>
-    <div class="realisations-grid">
-      <div class="real-card reveal">
-        <div class="arch-frame">
-          <img src="apres-terrasse.webp" alt="Jardin alpin - Chambéry">
-        </div>
-        <div class="real-label">
-          <h4>Jardins de particuliers</h4>
-          <span>Chambéry · Savoie</span>
-        </div>
-      </div>
-      <div class="real-card reveal">
-        <div class="arch-frame">
-          <img src="apres-terrasse2.webp" alt="Terrasse bois et piscine">
-        </div>
-        <div class="real-label">
-          <h4>Terrasses & aménagements</h4>
-          <span>Aix-les-Bains · Savoie</span>
-        </div>
-      </div>
-      <div class="real-card reveal">
-        <div class="arch-frame">
-          <img src="apres-gazon.jpg" alt="Remise en état pelouse">
-        </div>
-        <div class="real-label">
-          <h4>Espaces professionnels</h4>
-          <span>Albertville · Savoie</span>
-        </div>
-      </div>
-      <div class="real-card reveal">
-        <div class="arch-frame">
-          <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80" alt="Création jardin">
-        </div>
-        <div class="real-label">
-          <h4>Création & plantation</h4>
-          <span>Bourg-Saint-Maurice</span>
         </div>
       </div>
     </div>
